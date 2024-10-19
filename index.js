@@ -113,7 +113,8 @@ const sectors = [
     console.log(`Woop! You won ${sector.label}`);    
   });
   events.addListener("spinEnd", (sector) => {
-    alert(`Congratulations! You got ${sector.label}`);
+    document.getElementById("winner-btn").click()
+    document.getElementById("winner-text").innerText = `Congratulations! You got ${sector.label}`
 });
 
   

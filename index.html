@@ -1,23 +1,55 @@
 <!doctype html>
 <html>
   <head>
-    <title>Welcome to Automation Anywhere's Spin the Wheel</title>
-    <H1>
-      SOCIAL MEDIA CHALLENGE
-    </H1>
+    <title>SOCIAL MEDIA CHALLENGE</title>
     <meta charset="UTF-8" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
     </style>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="vcis.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
   </head>
-
+  
   <body>
-    
+    <div class="navbar top-0 fixed">
+      <div class="navbar-start">
+        <button class="btn btn-ghost btn-square">
+          <img src="vcis.png">
+        </button>
+      </div>
+      <div class="navbar-center">
+        <H1 class="text-3xl">
+          SOCIAL MEDIA CHALLENGE
+        </H1>
+      </div>
+      <div class="navbar-end">
+        <button class="btn btn-ghost btn-square">
+          <img src="nec.png">
+        </button>
+        <button class="btn btn-ghost btn-square">
+          <img src="ecell.png">
+        </button>
+      </div>
+    </div>
     <div id="spin_the_wheel">
       <canvas id="wheel" width="800" height="800"></canvas>
       <div id="spin">SPIN</div>
     </div>
+    <button class="btn hidden" id="winner-btn" onclick="my_modal_1.showModal()">spin done</button>
+    <dialog id="my_modal_1" class="modal">
+      <div class="modal-box">
+        <h3 class="text-lg font-bold"></h3>
+        <p class="py-4" id="winner-text">congrats you got</p>
+        <img src="post.png" alt="">
+        <div class="modal-action">
+          <form method="dialog">
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
  
     <script defer src="index.js"></script>
   </body>
