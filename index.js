@@ -122,4 +122,16 @@ events.addListener("spinStart", (sector) => {
     document.getElementById("winner-text").innerText = `Congratulations! You got ${sector.label}`
 });
 
-  
+// Add event listener for the download button
+document.getElementById("download-btn").addEventListener("click", function() {
+  // Get the image data URL
+  const imageDataURL = ctx.canvas.toDataURL("image/png");
+
+  // Create a temporary link element
+  const tempLink = document.createElement("a");
+  tempLink.href = imageDataURL;
+  tempLink.download = "wheel_image.png";
+
+  // Trigger the download
+  tempLink.click();
+});

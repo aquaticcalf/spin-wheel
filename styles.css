@@ -107,3 +107,17 @@
 #alertCloseButton:hover {
     background-color: #009999; /* Customize hover effect */
 }
+
+/* Styles for the download button */
+#download-btn {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+#download-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
