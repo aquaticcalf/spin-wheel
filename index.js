@@ -103,12 +103,17 @@ const sectors = [
     engine(); // Start engine
     spinEl.addEventListener("click", () => {
       if (!angVel) angVel = rand(0.35, 0.55);
+      events.fire("spinStart");
       spinButtonClicked = true;
     });
   }
   
   init();
-  
+
+events.addListener("spinStart", (sector) => {
+  document.getElementById("wheel-sound").play();
+})
+
   events.addListener("spinEnd", (sector) => {
     console.log(`Woop! You won ${sector.label}`);    
   });
