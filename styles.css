@@ -121,3 +121,8 @@
 #download-btn:hover {
     background-color: #45a049; /* Darker green on hover */
 }
+
+/* Increase the font size of the text in the popup */
+.modal-box p {
+    font-size: 24px;
+}
