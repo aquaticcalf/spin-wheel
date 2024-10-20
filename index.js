@@ -120,17 +120,15 @@ events.addListener("spinStart", (sector) => {
   events.addListener("spinEnd", (sector) => {
     document.getElementById("winner-btn").click()
     document.getElementById("winner-text").innerText = `Congratulations! You got ${sector.label}`
+    document.getElementById("winner-image").src = `${sector.label.toLowerCase().replace(/\s+/g, '')}.png`;
+    document.getElementById("download-btn").setAttribute("data-download", `${sector.label.toLowerCase().replace(/\s+/g, '')}.png`);
 });
 
 // Add event listener for the download button
 document.getElementById("download-btn").addEventListener("click", function() {
-  // Get the image data URL
-
-  // Create a temporary link element
+  const downloadLink = this.getAttribute("data-download");
   const tempLink = document.createElement("a");
-  tempLink.href = "https://aqclf.xyz/spin-wheel/post.png";
-  tempLink.download = "post.png";
-
-  // Trigger the download
+  tempLink.href = `https://aqclf.xyz/spin-wheel/${downloadLink}`;
+  tempLink.download = downloadLink;
   tempLink.click();
 });
