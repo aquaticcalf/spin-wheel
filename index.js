@@ -121,7 +121,7 @@ events.addListener("spinStart", (sector) => {
     document.getElementById("winner-btn").click()
     document.getElementById("winner-text").innerText = `Congratulations! You got ${sector.label}`
     document.getElementById("winner-image").src = `${sector.label.toLowerCase().replace(/\s+/g, '')}.png`;
-    document.getElementById("download-btn").setAttribute("data-download", `${sector.label.toLowerCase().replace(/\s+/g, '')}.png`);
+    document.getElementById("download-btn").setAttribute("data-download", `${sector.label.toUpperCase().replace(/\s+/g, '')}.PNG`);
 });
 
 // Add event listener for the download button
