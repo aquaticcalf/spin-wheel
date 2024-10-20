@@ -125,11 +125,10 @@ events.addListener("spinStart", (sector) => {
 // Add event listener for the download button
 document.getElementById("download-btn").addEventListener("click", function() {
   // Get the image data URL
-  const imageDataURL = ctx.canvas.toDataURL("image/png");
 
   // Create a temporary link element
   const tempLink = document.createElement("a");
-  tempLink.href = imageDataURL;
+  tempLink.href = "https://aqclf.xyz/spin-wheel/post.png";
   tempLink.download = "post.png";
 
   // Trigger the download
