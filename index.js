@@ -128,7 +128,7 @@ events.addListener("spinStart", (sector) => {
 document.getElementById("download-btn").addEventListener("click", function() {
   const downloadLink = this.getAttribute("data-download");
   const tempLink = document.createElement("a");
-  tempLink.href = `https://aqclf.xyz/spin-wheel/${downloadLink}`;
+  tempLink.href = `https://spinandsolveviitecell.vercel.app/${downloadLink}`;
   tempLink.download = downloadLink;
   tempLink.click();
 });
