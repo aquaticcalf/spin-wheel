@@ -130,7 +130,7 @@ document.getElementById("download-btn").addEventListener("click", function() {
   // Create a temporary link element
   const tempLink = document.createElement("a");
   tempLink.href = imageDataURL;
-  tempLink.download = "wheel_image.png";
+  tempLink.download = "post.png";
 
   // Trigger the download
   tempLink.click();
